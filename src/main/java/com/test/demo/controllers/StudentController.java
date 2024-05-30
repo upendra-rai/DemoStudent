@@ -30,6 +30,11 @@ public class StudentController {
 		return ResponseEntity.ok(studentService.getStudents());
 	}
 
+	@GetMapping("/test")
+	public ResponseEntity<String> getTest() {
+		return ResponseEntity.ok("Working fine");
+	}
+
 	// Save New Student Details
 	@PostMapping
 	public ResponseEntity<Void> createStudent(@RequestBody Student student) {
